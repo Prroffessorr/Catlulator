@@ -1,0 +1,74 @@
+<HTML>
+<HEAD>
+   
+    <title>Калькулятор для ПЗ4 на JavaScript</title>
+    <SCRIPT LANGUAGE="JAVASCRIPT">
+
+
+function Oblicz(Obiekt) {
+
+if (Obiekt.Y_input.lenght = 7) {
+    Obiekt.Number_of_zone.value = eval(Obiekt.Y_input.value[0])
+
+    Obiekt.Y_Deyst.value=eval((Obiekt.Y_input.value[1]+Obiekt.Y_input.value[2] + 
+    Obiekt.Y_input.value[3] +Obiekt.Y_input.value[4] +Obiekt.Y_input.value[5] +Obiekt.Y_input.value[6])-500000);
+
+   Obiekt. L_Mered.value=eval(((Obiekt.Y_input.value[0])*6)-3);
+}
+if (Obiekt.Y_input.lenght = 8) {
+    Obiekt.Number_of_zone.value = eval(Obiekt.Y_input.value[0] + Obiekt.Y_input.value[1]);
+   
+    Obiekt.Y_Deyst.value=eval((Obiekt.Y_input.value[2]+Obiekt.Y_input.value[3] + 
+    Obiekt.Y_input.value[4] +Obiekt.Y_input.value[5] +Obiekt.Y_input.value[6] +Obiekt.Y_input.value[7])-500000);
+    
+    Obiekt. L_Mered.value=eval(((Obiekt.Y_input.value[0] + Obiekt.Y_input.value[1])*6)-3);
+}           
+}     
+///////////////////////////////////////////////
+        function Reload(Obiekt) 
+        {  window.location.reload();}
+       
+    </SCRIPT>
+
+
+<style>
+div {
+margin: 5%;
+align-content: center;
+align-items: center;
+}
+p{
+font-family: 'Courier New', Courier, monospace ;
+margin: 5%;
+align-content: center;
+align-items: center;
+}
+</style>
+</HEAD>
+<BODY>
+    <div>
+    <form name="Kalkulator">
+        <pre>
+        Y_input
+        <input type="text" name="Y_input" reguired pattern="^[0-9]+$" size="20">
+        Result
+        <input type="text" disabled name="Number_of_zone" size="20">
+        Result_Y_Deyst
+        <input type="text" disabled name="Y_Deyst" size="20">
+        L_Mered
+        <input type="text" disabled name="L_Mered" size="20">
+
+        <input type="button"  name="Licz"     
+        value="     Calculate     "
+        onClick="Oblicz(this.form)">
+        <input type="button" name="Licz"
+        value="    Reload_page    "
+        onClick="Reload(this.form)">
+        <P>После вычислений не забывайте нажимать на кнопку Reload </P>
+        
+    </pre>
+    </form>
+</div>
+</BODY>
+
+</HTML>
